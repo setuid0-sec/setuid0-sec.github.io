@@ -1,0 +1,80 @@
+<html>
+
+	<head>
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous"></script>
+
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+
+	<div class="ui inverted menu">
+		<a class="item" href="index.html"> <i class="home icon"></i> Home </a>
+		<a class="active item" href="research.html"> <i class="bug icon"></i> Research Publications</a>
+		<a class="item" href="about.html"> <i class="user secret icon"></i> Whoami </a> 
+	</div>
+	
+	<div id="releases">
+	<h1>Vulnerability Releases</h1>
+	<p>In an increasingly connected world, vulnerabilities are everpresent.
+	</br>
+	Our goal is to find high-impact vulnerabilities in widely deployed products to protect millions of people.
+	</br>
+	Below you'll find a list of selected security vulnerabilities we've discovered:
+	</p>
+		
+	<h2>Electronic Voting Systems</h2>
+	<p>E-Voting Systems are vital for the functioning of a safe, resiliant democracy.
+	</br>
+	By discovering electronic voting system vulnerabilities we were able to save millions of humans from loss of trust in the government, riots and voting manipulation
+	</p>
+
+	<table>
+	<th>ID</th>
+	<th>Product</th>
+	<th>Vulnerability</th>
+	<tr>
+	<td><a href="research/CVE-2019-25022.html">CVE-2019-25022</a></td>
+	<td>Scytl Secure Vote (sVote)</td>
+	<td>SDM RCE</td>
+	</tr>
+	<tr>
+	<td><a href="research/CVE-2019-25023.html">CVE-2019-25023</a></td>
+	<td>Scytl Secure Vote (sVote)</td>
+	<td>X-Forwarded-For IP-Spoofing/Faking</td>
+	</tr>
+	<tr>
+	<td><a href="research/CVE-2019-25020.html">CVE-2019-25020</a></td>
+	<td>Scytl Secure Vote (sVote)</td>
+	<td>Unauthenticated REST Endpoints leading to Secure-Data-Manager admin configuration leak</td>
+	</tr>
+	<tr>
+	<td><a href="research/CVE-2019-25021.html">CVE-2019-25021</a></td>
+	<td>Scytl Secure Vote (sVote)</td>
+	<td>OrientDB Password</td>
+	</tr>
+	</table>
+
+
+	
+	<h2>Routers</h2>
+	<p>Routers are critical embedded systems. 
+	</br>
+	Exploits not only target a single system but can be abused to penetrate entire networks. 
+	</br>
+	Our work has helped major network vendors secure massive customerbases.
+	</p>
+	<ul>
+		<li>To be disclosed soon</li>
+	</ul>
+	
+	<h2>Your Product?</h2>
+	<p>If you want a thourough, fast and discreet security audit of your product get in contact with us!</p>
+	
+	</div>
+
+	</body>
+</html>
