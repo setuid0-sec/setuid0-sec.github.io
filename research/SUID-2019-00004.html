@@ -1,0 +1,71 @@
+<html>
+
+	<head>
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous"></script>
+
+		<link rel="stylesheet" href="../style.css">
+	</head>
+
+	<body>
+
+	<div class="ui inverted menu">
+		<a class="item" href="../index.html"> <i class="home icon"></i> Home </a>
+		<a class="active item" href="../research.html"> <i class="bug icon"></i> Research Publications</a>
+		<a class="item" href="../about.html"> <i class="user secret icon"></i> Whoami </a> 
+	</div>
+	
+	
+	<div id="releases">
+	<table>
+	<th>ID</th>
+	<th>Product</th>
+	<th>Version</th>
+	<th>Vulnerability</th>
+	<tr>
+	<td>SUID-2019-00004*</td>
+	<td>Scytl Secure Vote (sVote)</td>
+	<td>2.1</td>
+	<td>Hardcoded PKCS12 Passwords</td>
+	</tr>
+	</table>
+	
+	<h1>Description</h1>
+	
+
+	The mixnet-spring component uses hardcoded passwords for certificates: <i>evoting-solution/source-code/online-voting-mixing/mixnet-
+spring/src/main/java/com/scytl/products/ov/mixnet/spring/MixingSecureLoggerConfig.java</i></br>
+	
+	<code>private static final String CIPHER_PKCS12_PSWD = "649VRY52GXXCNJH48X5F";
+
+private static final String SIGNATURE_PKCS12_PSWD = "GXXCNJH48X5F649VRY52";
+	</code>
+	
+	These hardcoded values will be later used in the same file:</br>
+
+	<code>secureAppender.setCipherPkcs12FileName(CIPHER_PKCS12_CERTIFICATE);
+                secureAppender.setCipherPkcs12Password(CIPHER_PKCS12_PSWD);
+                secureAppender.setSignaturePkcs12FileName(SIGNATURE_PKCS12_CERTIFICATE);
+                secureAppender.setSignaturePkcs12Password(SIGNATURE_PKCS12_PSWD);
+	</code>
+	
+	Since the mixnet-spring library isn't intended for the "high-trust" environments they might not be directly attackable.</br>
+	Further iterations however might reuse code or implement unsafe coding practices which render the vulnerability exploitable.</br>
+	
+	<h1>Disclosure Timeline</h1>
+	<ul>
+	<li>Feb 07, 2019 - Submitted issue to vendor </li>
+	<li>Feb 13, 2019 - Vendor acknowledged the issue</li>
+	</ul>
+	<h1>Credit</h1>
+	<p>Jannis Kirschner & Anthony Schneiter from Team SUID</p></br>
+	
+	
+	
+	*SUID-ID's are referencing security issues and bad practices that are not neccessarly exploitable but still might cause issues in certain scenarios.
+	</div>
+
+	</body>
+</html>
