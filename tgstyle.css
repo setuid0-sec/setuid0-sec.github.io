@@ -5,8 +5,9 @@
 
 
 body {
-	background-color:#FEE225;
-	color: #031729;
+	background-color:black;
+	color: white;
+	font-size: 25px;
 }
 
 @font-face {
@@ -38,19 +39,23 @@ body {
 }
 
 #releases h1 {
+	font-size: 40px;
 	font-family: 'header', sans-serif;
 }
 
 #releases h2 {
+	font-size: 30px;
 	font-family: 'header', sans-serif;
 }
 
 
 #about h1 {
+	font-size: 40px;
 	font-family: 'header', sans-serif;
 }
 
 #about h2 {
+	font-size: 30px;
 	font-family: 'header', sans-serif;
 }
 
