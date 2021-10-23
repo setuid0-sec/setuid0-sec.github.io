@@ -1,129 +1,471 @@
 <html>
+    <head>
+        <title>setuid(0); Research Team</title>
+        <link rel="icon" type="image/png" href="/static/img/favicon.png" sizes="32x32">
 
-	<head>
-		<link rel="shortcut icon" href="favicon.ico">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
-		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous"></script>
+        <script src="/static/js/jquery-3.6.0.min.js"></script>
 
-		<link rel="stylesheet" href="style.css">
-	</head>
+        <link href="/static/semantic/semantic.min.css" rel="stylesheet" />
+        <link href="/static/css/halfmoon-variables.min.css" rel="stylesheet" />
 
-	<body>
-
-	<div class="ui inverted menu">
-		<a class="item" href="index.html"> <i class="home icon"></i> Home </a>
-		<a class="active item" href="research.html"> <i class="bug icon"></i> Research Publications</a>
-		<a class="item" href="about.html"> <i class="user secret icon"></i> Whoami </a> 
-	</div>
-	
-	<div id="releases">
-	<h1>Vulnerability Releases</h1>
-	<p>In an increasingly <b>connected</b> world, vulnerabilities are everpresent.
-	</br>
-	Our goal is to find <b>high-impact</b> vulnerabilities in <b>widely deployed</b> products to protect millions of people.
-	</br>
-	Below you'll find a list of selected security vulnerabilities we've discovered:
-	</p>
-		
-	<h2>Electronic Voting Systems</h2>
-	<p><b>Secure</b> E-Voting Systems are <b>vital</b> for the functioning of a safe, resiliant democracy.
-	</br>
-	By discovering electronic voting system vulnerabilities we were able to save <b>millions</b> of humans from loss of trust in the government, riots and voting manipulation
-	</p>
-
-	<table>
-	<th>ID</th>
-	<th>Product</th>
-	<th>Vulnerability</th>
-	<tr>
-	<td><a href="research/CVE-2019-25022.html">CVE-2019-25022</a></td>
-	<td>Scytl Secure Vote (sVote)</td>
-	<td>SDM RCE</td>
-	</tr>
-	<tr>
-	<td><a href="research/CVE-2019-25023.html">CVE-2019-25023</a></td>
-	<td>Scytl Secure Vote (sVote)</td>
-	<td>X-Forwarded-For IP-Spoofing/Faking</td>
-	</tr>
-	<tr>
-	<td><a href="research/CVE-2019-25020.html">CVE-2019-25020</a></td>
-	<td>Scytl Secure Vote (sVote)</td>
-	<td>Unauthenticated REST Endpoints leading to Secure-Data-Manager admin configuration leak</td>
-	</tr>
-	<tr>
-	<td><a href="research/CVE-2019-25021.html">CVE-2019-25021</a></td>
-	<td>Scytl Secure Vote (sVote)</td>
-	<td>OrientDB Password</td>
-	</tr>
-	<tr>
-	<td><a href="research/SUID-2019-00001.html">SUID-2019-00001</a></td>
-	<td>Scytl Secure Vote (sVote)</td>
-	<td>Jackson-Databind RCE</td>
-	</tr>
-	<tr>
-	<td><a href="research/SUID-2019-00002.html">SUID-2019-00002</a></td>
-	<td>Scytl Secure Vote (sVote)</td>
-	<td>XSS</td>
-	</tr>
-	<tr>
-	<td><a href="research/SUID-2019-00003.html">SUID-2019-00003</a></td>
-	<td>Scytl Secure Vote (sVote)</td>
-	<td>XXE</td>
-	</tr>
-	<tr>
-	<td><a href="research/SUID-2019-00004.html">SUID-2019-00004</a></td>
-	<td>Scytl Secure Vote (sVote)</td>
-	<td>Hardcoded PKCS12 Passwords</td>
-	</tr>
-	</table>
+        <script src="/static/semantic/semantic.min.js"></script>   
 
 
-	
-	<h2>Routers</h2>
-	<p>Routers are critical embedded systems. 
-	</br>
-	Exploits not only target a single system but can be abused to penetrate <b>entire networks</b>. 
-	</br>
-	Our work has helped major network vendors secure <b>massive</b> customerbases.
-	</p>
-	
-	<table>
-	<th>ID</th>
-	<th>Product</th>
-	<th>Vulnerability</th>
-	<tr>
-	<td><a href="research/DAP-2020_Preauth_RCE_Chain.html">CVE-2021-27249</a></td>
-	<td>D-Link DAP-2020</td>
-	<td>Command Injection RCE</td>
-	</tr>
-	<tr>
-	<td><a href="research/DAP-2020_Preauth_RCE_Chain.html">CVE-2021-27250</a></td>
-	<td>D-Link DAP-2020</td>
-	<td>Arbitrary File Read</td>
-	</tr>
-	</table>
-	
-	<h2>Malware Analysis</h2>
-	<p>Attacks via Malware are omnipresent and are impacting million of lives.</br>
-	We are committed to analyze and disrupt active malware campaigns.
-	</p>
-	
-	<table>
-	<th>ID</th>
-	<th>Type</th>
-	<th>Malware</th>
-	<tr>
-	<td>SMAL-2021-00001</td>
-	<td>Spyware/Malvertising</td>
-	<td><a href="research/Telegram_Malware_Analysis.html">Telegram Malvertising Campaign (March 2021)</a></td>
-	</tr>
-	</table>
-	
-	<h2>Your Product?</h2>
-	<p>If you want a thourough, fast and discreet security audit of your product get in contact with us!</p>
-	
-	</div>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/base16/dracula.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+        
+        <link href="/static/css/suid.css" rel="stylesheet" />
+    </head>
 
-	</body>
+    <body>
+        <div class="page-wrapper with-navbar-fixed-bottom">
+            <div class="content-wrapper">
+                <nav class="navbar">
+
+                    <a href="/home.html" class="navbar-brand">
+                        setuid(0);
+                    </a>
+
+                    <ul class="navbar-nav d-none d-md-flex"> 
+                        <li class="nav-item">
+                            <a href="/research.html" class="nav-link">
+                                <button class="btn alt-dm active" type="button" style="color:#0FFFFF;">Research</button>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/art.html" class="nav-link">
+                                <button class="btn alt-dm active" type="button" style="color:#FF1493;">Art</button>
+                            </a>
+                        </li>
+                    </ul>
+
+                </nav>
+
+                <div id="pageContent" class="container-fluid">
+                    <br />
+
+<div style="margin-left:30px;">
+    <h3>Routers</h3>
+    <pre>Routers are critical embedded systems.<br />Exploits not only target a single system but can be abused to penetrate entire networks.<br />Our work has helped major network vendors secure massive customerbases.</pre>
+</div>
+<div class="w-1000 mw-full">
+    <div class="card p-0 bg-very-dark-dm"> 
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        
+                        <td><b>ID</b></td>
+                        
+                        <td><b>Product</b></td>
+                        
+                        <td><b>Version</b></td>
+                        
+                        <td><b>Vulnerability</b></td>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        
+                        <td>
+                            
+                                <a href="/research/CVE-2021-27249.html">CVE-2021-27249</a>
+                            
+                        </td>
+                        
+                        <td>
+                            
+                                D-Link DAP-2020
+                            
+                        </td>
+                        
+                        <td>
+                            
+                                1.01
+                            
+                        </td>
+                        
+                        <td>
+                            
+                                Command Injection RCE
+                            
+                        </td>
+                        
+                    </tr>
+
+                    <tr>
+                        
+                        <td>
+                            
+                                <a href="/research/CVE-2021-27250.html">CVE-2021-27250</a>
+                            
+                        </td>
+                        
+                        <td>
+                            
+                                D-Link DAP-2020
+                            
+                        </td>
+                        
+                        <td>
+                            
+                                1.01
+                            
+                        </td>
+                        
+                        <td>
+                            
+                                Arbitrary File Read
+                            
+                        </td>
+                        
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div style="margin-left:30px;">
+    <h3>Malware Analysis</h3>
+    <pre>Attacks via Malware are omnipresent and are impacting million of lives.<br />We are committed to analyze and disrupt active malware campaigns.</pre>
+</div>
+<div class="w-1000 mw-full">
+    <div class="card p-0 bg-very-dark-dm"> 
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        
+                        <td><b>ID</b></td>
+                        
+                        <td><b>Type</b></td>
+                        
+                        <td><b>Malware</b></td>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        
+                        <td>
+                            
+                                <a href="/research/SMAL-2021-00001.html">SMAL-2021-00001</a>
+                            
+                        </td>
+                        
+                        <td>
+                            
+                                Spyware/Malvertising
+                            
+                        </td>
+                        
+                        <td>
+                            
+                                Telegram Malvertising Campaign (March 2021)
+                            
+                        </td>
+                        
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div style="margin-left:30px;">
+    <h3>Electronic Voting Systems</h3>
+    <pre>Secure E-Voting Systems are vital for the functioning of a safe, resiliant democracy.<br />By discovering electronic voting system vulnerabilities we were able to save millions of humans from loss of trust in the government, riots and voting manipulation</pre>
+</div>
+<div class="w-1000 mw-full">
+    <div class="card p-0 bg-very-dark-dm"> 
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        
+                        <td><b>ID</b></td>
+                        
+                        <td><b>Product</b></td>
+                        
+                        <td><b>Version</b></td>
+                        
+                        <td><b>Vulnerability</b></td>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        
+                        <td>
+                            
+                                <a href="/research/CVE-2019-25020.html">CVE-2019-25020</a>
+                            
+                        </td>
+                        
+                        <td>
+                            
+                                Scytl Secure Vote (sVote)
+                            
+                        </td>
+                        
+                        <td>
+                            
+                                2.1
+                            
+                        </td>
+                        
+                        <td>
+                            
+                                Unauthenticated REST Endpoints leading to Secure-Data-Manager admin configuration leak
+                            
+                        </td>
+                        
+                    </tr>
+
+                    <tr>
+                        
+                        <td>
+                            
+                                <a href="/research/CVE-2019-25021.html">CVE-2019-25021</a>
+                            
+                        </td>
+                        
+                        <td>
+                            
+                                Scytl Secure Vote (sVote)
+                            
+                        </td>
+                        
+                        <td>
+                            
+                                2.1
+                            
+                        </td>
+                        
+                        <td>
+                            
+                                OrientDB Password
+                            
+                        </td>
+                        
+                    </tr>
+
+                    <tr>
+                        
+                        <td>
+                            
+                                <a href="/research/CVE-2019-25022.html">CVE-2019-25022</a>
+                            
+                        </td>
+                        
+                        <td>
+                            
+                                Scytl Secure Vote (sVote)
+                            
+                        </td>
+                        
+                        <td>
+                            
+                                2.1
+                            
+                        </td>
+                        
+                        <td>
+                            
+                                SDM RCE
+                            
+                        </td>
+                        
+                    </tr>
+
+                    <tr>
+                        
+                        <td>
+                            
+                                <a href="/research/CVE-2019-25023.html">CVE-2019-25023</a>
+                            
+                        </td>
+                        
+                        <td>
+                            
+                                Scytl Secure Vote (sVote)
+                            
+                        </td>
+                        
+                        <td>
+                            
+                                2.1
+                            
+                        </td>
+                        
+                        <td>
+                            
+                                X-Forwarded-For IP-Spoofing/Faking
+                            
+                        </td>
+                        
+                    </tr>
+
+                    <tr>
+                        
+                        <td>
+                            
+                                <a href="/research/SUID-2019-00001.html">SUID-2019-00001</a>
+                            
+                        </td>
+                        
+                        <td>
+                            
+                                Scytl Secure Vote (sVote)
+                            
+                        </td>
+                        
+                        <td>
+                            
+                                2.1
+                            
+                        </td>
+                        
+                        <td>
+                            
+                                Jackson-Databind RCE
+                            
+                        </td>
+                        
+                    </tr>
+
+                    <tr>
+                        
+                        <td>
+                            
+                                <a href="/research/SUID-2019-00002.html">SUID-2019-00002</a>
+                            
+                        </td>
+                        
+                        <td>
+                            
+                                Scytl Secure Vote (sVote)
+                            
+                        </td>
+                        
+                        <td>
+                            
+                                2.1
+                            
+                        </td>
+                        
+                        <td>
+                            
+                                XSS
+                            
+                        </td>
+                        
+                    </tr>
+
+                    <tr>
+                        
+                        <td>
+                            
+                                <a href="/research/SUID-2019-00003.html">SUID-2019-00003</a>
+                            
+                        </td>
+                        
+                        <td>
+                            
+                                Scytl Secure Vote (sVote)
+                            
+                        </td>
+                        
+                        <td>
+                            
+                                2.1
+                            
+                        </td>
+                        
+                        <td>
+                            
+                                XXE
+                            
+                        </td>
+                        
+                    </tr>
+
+                    <tr>
+                        
+                        <td>
+                            
+                                <a href="/research/SUID-2019-00004.html">SUID-2019-00004</a>
+                            
+                        </td>
+                        
+                        <td>
+                            
+                                Scytl Secure Vote (sVote)
+                            
+                        </td>
+                        
+                        <td>
+                            
+                                2.1
+                            
+                        </td>
+                        
+                        <td>
+                            
+                                Hardcoded PKCS12 Passwords
+                            
+                        </td>
+                        
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+                </div>
+            </div>
+            <nav class="navbar navbar-fixed-bottom">
+                <div class="navbar-content">
+                    <a href="https://twitter.com/_setuid0_"><i class="twitter icon" style="color:white;"></i></a>
+                    <a href="https://github.com/setuid0-sec"><i class="github icon" style="color:white;"></i></a>
+                </div>
+                <a href="#" class="navbar-brand ml-auto" style="font-size:14px; font-weight:normal;"> 
+                    setuid(0); Research Team
+                </a>
+                <span class="navbar-text ml-auto">
+                    &copy; setuid(0);
+                </span>
+                </nav>
+        </div>
+
+        <script src="/static/js/halfmoon.min.js"></script>
+        <script>
+            halfmoon.toggleDarkMode();
+        </script>
+
+        <style type="text/css">
+
+            .content-wrapper {
+                background-color: rgba(37, 40, 44, 0.9);
+            }
+
+            .page-wrapper {
+                background-image: url('/static/img/background.gif');
+            }
+
+        </style>  
+
+    </body>
 </html>
